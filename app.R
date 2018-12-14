@@ -61,7 +61,7 @@ server = function(input, output) {
     } else if (input$period == "In-Season") {
       filters = filter(training_data, Date >= "8/3/2019" & Date <= "10/10/2019")
     } else {
-      filters = filter(training_data, as.Date(Date, format = "%d/%m/%y") >= Sys.time() - 86400 * 30)
+      filters = filter(training_data, as.Date(Date, format = "%d/%m/%Y") >= Sys.time() - 86400 * 30)
     }
   })
 
